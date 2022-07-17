@@ -21,9 +21,9 @@
 					<!-- Show the "visited" products -->
 					<div class="col-12 col-sm-6 col-lg-3">
 
-						<% products['visited'].forEach(product => { %>
+						<% products['visited'].forEach( product => { %>
 						 	
-							<% include('partials/product-box') %> 
+							<%- include('partials/product-box', {product}) %> 
 						
 						<% }) %>
 
@@ -41,9 +41,9 @@
 					<!-- Show the "in-sale" products -->
 					<div class="col-12 col-sm-6 col-lg-3">
 
-						<% products['in-sale'].forEach(product => { %>
+						<% products['in-sale'].forEach( product => { %>
 						 	
-							<% include('partials/product-box') %> 
+							<%- include('partials/product-box', {product}) %> 
 						
 						<% }) %>
 
