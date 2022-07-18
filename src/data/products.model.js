@@ -43,6 +43,8 @@ module.exports.addEntry = (obj) => {
     fs.writeFileSync( dir, JSON.stringify( data, null, '\t'), 'utf8');
     
     console.log('\nEntry added successfully')
+    
+    return obj
 }
 
 module.exports.removeEntry = (id) => {

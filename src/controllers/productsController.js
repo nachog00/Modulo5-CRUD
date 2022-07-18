@@ -32,8 +32,8 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		let data = req.body;
-		model.addEntry(data);
-		res.redirect('/');		
+		let obj = model.addEntry(data);
+		res.redirect(`/products/${obj.id}`);
 	},
 
 	// Update - Form to edit
