@@ -17,6 +17,14 @@ const mapById = (data) => {
 
 /* MODEL */
 
+module.exports.getNewId = () => {
+    let data = this.getData();
+
+    let lastId = data[data.length - 1].id;
+
+    return lastId + 1  
+}
+
 module.exports.getData = () => {
     let dir = resolve(__dirname, './productsDataBase.json');
     let file = fs.readFileSync( dir, 'utf8');
@@ -26,6 +34,8 @@ module.exports.getData = () => {
 
 module.exports.addEntry = (obj) => {
     let dir = resolve(__dirname, './productsDataBase.json');
+
+    obj.id = this.getNewId();
     
     let file = fs.readFileSync( dir, 'utf8');
     let data = JSON.parse(file);
@@ -91,7 +101,6 @@ module.exports.replaceEntry = (entry) => {
 // console.log(module.exports.getData());
 
 // this.addEntry({
-//     id: 'newData',
 //     name : 'oldName',
 //     stuff : 'stuff'
 // })

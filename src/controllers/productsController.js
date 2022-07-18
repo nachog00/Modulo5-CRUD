@@ -1,19 +1,23 @@
+/* External requires */
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+/* Model require */
+const model = require(path.join(__dirname, '../data/products.model'));
 
+/* utils */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
+		let products = model.getData();
 		res.render('products', {products , toThousand});
 	},
-
+	
 	// Detail - Detail from one product
 	detail: (req, res) => {
+		let products = model.getData();
 		res.render('detail', {
 			product : products.filter(product => product.id == req.params.id)[0],
 			toThousand
@@ -28,7 +32,8 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		let data = req.body;
-		
+		model.addEntry(data);
+		res.redirect('/');		
 	},
 
 	// Update - Form to edit
