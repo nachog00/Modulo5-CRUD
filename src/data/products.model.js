@@ -31,6 +31,10 @@ module.exports.getData = () => {
     return JSON.parse(file);
 }
 
+module.exports.getEntry = (id) => {
+    return this.getData().filter( entry => entry.id == id)[0];
+}
+
 
 module.exports.addEntry = (obj) => {
     let dir = resolve(__dirname, './productsDataBase.json');

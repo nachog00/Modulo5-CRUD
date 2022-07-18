@@ -17,7 +17,7 @@ router.post('/', productsController.store);
 router.get('/:id', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-// router.???('/:id/???', productsController.edit); 
+router.get('/edit/:id/', productsController.edit); 
 // router.???('/:id', productsController.update); 
 
 

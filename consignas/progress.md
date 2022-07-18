@@ -25,11 +25,11 @@
 * [x] **`/products/create`** <br>
 >Mostrará el formulario de creación para un producto.
 
-* [ ] **`/products/`** <br>
+* [x] **`/products/`** <br>
 >Deberá recibir los datos del formulario de creación.
 
 * [ ] **`/products/edit/:id`** <br>
->Botón MODIFICAR: modificará al producto correspondiente en la base dedatos JSON.
+>Botón MODIFICAR: modificará al producto correspondiente en la base de datos JSON.
 
 * [ ] **`/products/`** <br>
 >Deberá recibir los datos del formulario de edición.
