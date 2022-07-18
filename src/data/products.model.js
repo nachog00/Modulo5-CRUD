@@ -69,10 +69,10 @@ module.exports.addEntry = (obj) => {
 }
 
 /**
- * Remove entry from productsDataBase
+ * Delete entry from productsDataBase
  * @param {string} id id of the entry to remove
  */
-module.exports.removeEntry = (id) => {
+module.exports.deleteEntry = (id) => {
     let dir = resolve(__dirname, './productsDataBase.json');
     
     let file = fs.readFileSync( dir, 'utf8');

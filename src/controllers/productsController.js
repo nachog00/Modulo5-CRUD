@@ -57,7 +57,10 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		// Do the magic
+		let id = req.params.id;
+		model.deleteEntry( id );
+
+		res.redirect(`/products`);
 	}
 };
 
