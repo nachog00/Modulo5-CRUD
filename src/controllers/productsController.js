@@ -4,7 +4,7 @@ const { resolve } = require('path');
 const path = require('path');
 
 /* Model require */
-const model = require(path.join(__dirname, '../data/products.model'));
+const model = require(path.resolve(__dirname, '..','data','products.model'));
 
 /* utils */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
