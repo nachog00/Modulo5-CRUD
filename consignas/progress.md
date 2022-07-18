@@ -1,9 +1,11 @@
-# To-do
-> ***To-do* list from assignments**
->
-- [To-do](#to-do)
-  - [CRUD Episodio I](#crud-episodio-i)
-    - [Routes](#routes)
+# Progress
+***To-do* list from assignments**
+
+---
+
+1. [Progress](#progress)
+   1. [CRUD Episodio I](#crud-episodio-i)
+      1. [Routes](#routes)
 
 ---
 
