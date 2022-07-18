@@ -22,7 +22,8 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		// Do the magic
+		res.render('product-create-form', {})
+
 	},
 	
 	// Create -  Method to store

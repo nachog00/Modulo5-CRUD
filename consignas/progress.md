@@ -19,10 +19,10 @@
 * [x] **`/products`** <br>
 >Se deberán listar todos los productos presentes en la base de datos JSON.
 
-* [ ] **`/products/:id`** <br>
+* [x] **`/products/:id`** <br>
 >Detalle de producto. Cada producto deberá contar con dos botones deacción: BORRAR y MODIFICAR.
 
-* [ ] **`/products/create`** <br>
+* [x] **`/products/create`** <br>
 >Mostrará el formulario de creación para un producto.
 
 * [ ] **`/products/`** <br>
