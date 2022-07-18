@@ -13,25 +13,25 @@
 
 ### Routes
 
-* [X] **`/`** <br>
+* [X] ~~*`/` <br>*~~ [15:27  -  18/07]
 >Se deberán mostrar los productos separados en dos secciones. Los últimosvisitados y los productos en oferta.
 
-* [x] **`/products`** <br>
+* [X] ~~*`/products` <br>*~~ [15:27  -  18/07]
 >Se deberán listar todos los productos presentes en la base de datos JSON.
 
-* [x] **`/products/:id`** <br>
+* [X] ~~*`/products/:id` <br>*~~ [15:27  -  18/07]
 >Detalle de producto. Cada producto deberá contar con dos botones deacción: BORRAR y MODIFICAR.
 
-* [x] **`/products/create`** <br>
+* [X] ~~*`/products/create` <br>*~~ [15:27  -  18/07]
 >Mostrará el formulario de creación para un producto.
 
-* [x] **`/products/`** <br>
+* [X] ~~*`/products/` <br>*~~ [15:27  -  18/07]
 >Deberá recibir los datos del formulario de creación.
 
-* [x] **`/products/edit/:id`** <br>
+* [X] ~~*`/products/edit/:id` <br>*~~ [15:27  -  18/07]
 >Botón MODIFICAR: modificará al producto correspondiente en la base de datos JSON.
 
-* [ ] **`/products/`** <br>
+* [X] ~~*`/products/` <br>*~~ [15:27  -  18/07]
 >Deberá recibir los datos del formulario de edición.
 
 * [ ] **`/products/:id`** <br>
@@ -56,4 +56,3 @@ A continuación se detalla lo que deberá mostrar cada ruta:
   * Formulario de edición.○Recepción del formulario de edición.○Eliminación de productos.
 * Para las rutas de recepción de formularios y borrado, nos solicitan quesimplemente mostremos, por ahora, un mensaje de la acción.
 
-* [ ] 
