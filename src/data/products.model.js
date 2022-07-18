@@ -17,6 +17,10 @@ const mapById = (data) => {
 
 /* MODEL */
 
+/**
+ * Gets the corresponding new id, based on the higest id in the database.
+ * @returns {int} new id
+ */
 module.exports.getNewId = () => {
     let data = this.getData();
 
@@ -25,17 +29,30 @@ module.exports.getNewId = () => {
     return lastId + 1  
 }
 
+/**
+ * Gets all the database as an object.
+ * @returns {object} data object with all the productsDataBase information
+ */
 module.exports.getData = () => {
     let dir = resolve(__dirname, './productsDataBase.json');
     let file = fs.readFileSync( dir, 'utf8');
     return JSON.parse(file);
 }
 
+/**
+ * Retrieves some entry from the productsDataBase
+ * @param {string} id id of the product to retrieve
+ * @returns {object} entry object
+ */
 module.exports.getEntry = (id) => {
     return this.getData().filter( entry => entry.id == id)[0];
 }
 
-
+/**
+ * Store new entry in the productsDataBase
+ * @param {object} obj data object to store
+ * @returns {object} obj modified object with newly asigned id
+ */
 module.exports.addEntry = (obj) => {
     let dir = resolve(__dirname, './productsDataBase.json');
 
@@ -51,6 +68,10 @@ module.exports.addEntry = (obj) => {
     return obj
 }
 
+/**
+ * Remove entry from productsDataBase
+ * @param {string} id id of the entry to remove
+ */
 module.exports.removeEntry = (id) => {
     let dir = resolve(__dirname, './productsDataBase.json');
     
@@ -64,8 +85,9 @@ module.exports.removeEntry = (id) => {
 
 
 /**
- * @param  {string} id 'id of object to modify
- * @param  {object} obj 'new data for entry'
+ * Edit some entry from productsDataBase
+ * @param  {string} id id of object to modify
+ * @param  {object} obj new data for entry
  */
 module.exports.editEntry = ( id, obj) => {
     let dir = resolve(__dirname, './productsDataBase.json');
@@ -88,6 +110,10 @@ module.exports.editEntry = ( id, obj) => {
     console.log('\nEntry edited successfully')
 };
 
+/**
+ * Replaces whole entry from the productsDataBase
+ * @param {object} entry entry object with matching id to the one to be replaced 
+ */
 module.exports.replaceEntry = (entry) => {
 
     let dir = resolve(__dirname, './productsDataBase.json');

@@ -50,7 +50,7 @@ const controller = {
 		let id = req.params.id;
 		let data = req.body;
 
-		model.editEntry( id, data)
+		model.editEntry( id, data);
 
 		res.redirect(`/products/${id}`);
 	},
