@@ -16,7 +16,7 @@
 * [X] **`/`** <br>
 >Se deberán mostrar los productos separados en dos secciones. Los últimosvisitados y los productos en oferta.
 
-* [ ] **`/products`** <br>
+* [x] **`/products`** <br>
 >Se deberán listar todos los productos presentes en la base de datos JSON.
 
 * [ ] **`/products/:id`** <br>

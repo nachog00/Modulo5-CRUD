@@ -13,7 +13,8 @@ const controller = {
 			products: {
 				'visited' : products.filter(x => x.category === 'visited'),
 				'in-sale' : products.filter(x => x.category === 'in-sale'),
-			}
+			},
+			toThousand
 		} )
 	},
 	
