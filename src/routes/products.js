@@ -14,7 +14,7 @@ router.get('/', productsController.index);
 
 
 /*** GET ONE PRODUCT ***/ 
-// router.???('/:id/', productsController.detail); 
+router.get('/:id/', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
 // router.???('/:id/???', productsController.edit); 
