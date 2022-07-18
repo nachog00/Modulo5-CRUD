@@ -1,5 +1,6 @@
 /* External requires */
 const fs = require('fs');
+const { resolve } = require('path');
 const path = require('path');
 
 /* Model require */
@@ -43,9 +44,15 @@ const controller = {
 			productToEdit: model.getEntry( id ),
 		})
 	},
+
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		let id = req.params.id;
+		let data = req.body;
+
+		model.editEntry( id, data)
+
+		res.redirect(`/products/${id}`);
 	},
 
 	// Delete - Delete one product from DB

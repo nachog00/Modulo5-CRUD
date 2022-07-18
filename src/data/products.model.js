@@ -62,6 +62,11 @@ module.exports.removeEntry = (id) => {
     console.log('\nEntry removed successfully')
 };
 
+
+/**
+ * @param  {string} id 'id of object to modify
+ * @param  {object} obj 'new data for entry'
+ */
 module.exports.editEntry = ( id, obj) => {
     let dir = resolve(__dirname, './productsDataBase.json');
     

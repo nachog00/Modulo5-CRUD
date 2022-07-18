@@ -28,7 +28,7 @@
 * [x] **`/products/`** <br>
 >Deberá recibir los datos del formulario de creación.
 
-* [ ] **`/products/edit/:id`** <br>
+* [x] **`/products/edit/:id`** <br>
 >Botón MODIFICAR: modificará al producto correspondiente en la base de datos JSON.
 
 * [ ] **`/products/`** <br>
@@ -55,3 +55,5 @@ A continuación se detalla lo que deberá mostrar cada ruta:
   * Recepción del formulario de carga.
   * Formulario de edición.○Recepción del formulario de edición.○Eliminación de productos.
 * Para las rutas de recepción de formularios y borrado, nos solicitan quesimplemente mostremos, por ahora, un mensaje de la acción.
+
+* [ ] 
