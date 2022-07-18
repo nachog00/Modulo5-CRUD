@@ -23,12 +23,12 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 		res.render('product-create-form', {})
-
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		// Do the magic
+		let data = req.body;
+		
 	},
 
 	// Update - Form to edit
