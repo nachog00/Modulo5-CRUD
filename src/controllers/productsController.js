@@ -2,6 +2,7 @@
 const fs = require('fs');
 const { resolve } = require('path');
 const path = require('path');
+const upload = require('../data/upload');
 
 /* Model require */
 const model = require(path.resolve(__dirname, '..','data','products.model'));
