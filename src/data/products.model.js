@@ -5,6 +5,10 @@ const { json } = require('express');
 const fs = require('fs');
 const {resolve} = require('path');
 
+/* CONSTANTS */
+
+const DATABASE_FILE_NAME = 'productsDataBase.json';
+
 /* utils */
 
 const mapById = (data) => {
@@ -34,7 +38,7 @@ module.exports.getNewId = () => {
  * @returns {object} data object with all the productsDataBase information
  */
 module.exports.getData = () => {
-    let dir = resolve(__dirname, './productsDataBase.json');
+    let dir = resolve(__dirname, DATABASE_FILE_NAME );
     let file = fs.readFileSync( dir, 'utf8');
     return JSON.parse(file);
 }
@@ -54,7 +58,7 @@ module.exports.getEntry = (id) => {
  * @returns {object} obj modified object with newly asigned id
  */
 module.exports.addEntry = (obj) => {
-    let dir = resolve(__dirname, './productsDataBase.json');
+    let dir = resolve(__dirname, DATABASE_FILE_NAME );
 
     obj.id = this.getNewId();
     
@@ -73,7 +77,7 @@ module.exports.addEntry = (obj) => {
  * @param {string} id id of the entry to remove
  */
 module.exports.deleteEntry = (id) => {
-    let dir = resolve(__dirname, './productsDataBase.json');
+    let dir = resolve(__dirname, DATABASE_FILE_NAME );
     
     let file = fs.readFileSync( dir, 'utf8');
     let data = JSON.parse(file);
@@ -90,7 +94,7 @@ module.exports.deleteEntry = (id) => {
  * @param  {object} obj new data for entry
  */
 module.exports.editEntry = ( id, obj) => {
-    let dir = resolve(__dirname, './productsDataBase.json');
+    let dir = resolve(__dirname, DATABASE_FILE_NAME );
     
     let file = fs.readFileSync( dir, 'utf8');
     let data = JSON.parse(file);
@@ -116,7 +120,7 @@ module.exports.editEntry = ( id, obj) => {
  */
 module.exports.replaceEntry = (entry) => {
 
-    let dir = resolve(__dirname, './productsDataBase.json');
+    let dir = resolve(__dirname, DATABASE_FILE_NAME );
     
     let id = entry.id
     let file = fs.readFileSync( dir, 'utf8');

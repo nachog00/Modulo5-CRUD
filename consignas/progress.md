@@ -3,11 +3,14 @@
 
 ---
 
-1. [Progress](#progress)
-   1. [CRUD Episodio I](#crud-episodio-i)
-      1. [Routes](#routes)
-      2. [Requerimientos](#requerimientos)
-   2. [CRUD Episodio II](#crud-episodio-ii)
+- [Progress](#progress)
+  - [CRUD Episodio I](#crud-episodio-i)
+    - [Routes](#routes)
+    - [Requerimientos](#requerimientos)
+  - [CRUD Episodio II](#crud-episodio-ii)
+    - [**MD - Paso 1**](#md---paso-1)
+    - [**MD - Paso 2**](#md---paso-2)
+    - [**MD - Paso 3**](#md---paso-3)
 
 ---
 
@@ -70,10 +73,10 @@ A continuación se detalla lo que deberá mostrar cada ruta:
 ### **MD - Paso 1** 
 
 Tomando como referencia la ejercitación de la clase anterior, debemos codificar el formulario de carga de un producto,  el cual deberáactualizar el archivo JSON con los datos del nuevo producto ingresado. Dicho formulario será accedido desde la ruta:
-* [ ] `/products/create`
+* [X] ~~*`/products/create`*~~ [17:35  -  24/07]
 <br> y una vez se procese dicho forlmulario, redirigir a:
 
-* [ ] `/products`
+* [X] ~~*`/products`*~~ [17:35  -  24/07]
 <br>donde debemos mostrar todos los productosde nuestro JSON. Tengamos encuenta que debemos incluir la posibilidad de subiruna imagen del producto.
 
 ---
