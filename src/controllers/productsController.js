@@ -2,7 +2,6 @@
 const fs = require('fs');
 const { resolve } = require('path');
 const path = require('path');
-const upload = require('../data/upload');
 
 /* Model require */
 const model = require(path.resolve(__dirname, '..','data','products.model'));
@@ -27,14 +26,16 @@ const controller = {
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
+	create: (req, res, next) => {
 		res.render('product-create-form', {})
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 		let data = req.body;
+		data.image = ['img', ... data.name.toLowerCase().split(" ")].join('-') + '.jpg'
 		let obj = model.addEntry(data);
+		// res.send(obj)
 		res.redirect(`/products/${obj.id}`);
 	},
 
