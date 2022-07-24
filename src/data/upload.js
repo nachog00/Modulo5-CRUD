@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
       cb(null, './public/images/products')
     },
     filename: function (req, file, cb) {
-      let name = ['img', ...file.originalname.split(" ")].join('-')
+      let name = ['img', ...req.body.name.toLowerCase().split(" ")].join('-') + '.jpg';
       console.log(`Uploading file ${name}`);
       cb(null, name)
     }
