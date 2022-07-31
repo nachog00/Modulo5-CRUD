@@ -7,20 +7,21 @@ const productsController = require('../controllers/productsController');
 
 // ************ Middlewares Require ************
 const upload = require('../data/upload.js');
+const formValidation = require('../middlewares/formValidation.js');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/', productsController.create); 
-router.post('/', upload.any(), productsController.store); 
+router.post('/', upload.any(), formValidation, productsController.store); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.edit); 
-router.put('/:id', productsController.update);
+router.put('/:id', formValidation, productsController.update);
 
 
 /*** DELETE ONE PRODUCT***/ 

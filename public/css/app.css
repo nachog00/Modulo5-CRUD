@@ -407,6 +407,12 @@ textarea.form-input {
   padding: 15px;
 }
 
+form .feedback {
+  color: red;
+  font-size: medium;
+  font-weight: bold;
+}
+
 
 
 /*====== Media-Queries ======*/

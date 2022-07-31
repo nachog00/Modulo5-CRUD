@@ -9,6 +9,11 @@ const model = require(path.resolve(__dirname, '..','data','products.model'));
 /* utils */
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+/* form Validation */
+// const validation = require('../middlewares/formValidation');
+const { validationResult } = require('express-validator');
+const validation = require('../middlewares/formValidation');
+
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
@@ -32,11 +37,19 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let data = req.body;
-		data.image = ['img', ... data.name.toLowerCase().split(" ")].join('-') + '.jpg'
-		let obj = model.addEntry(data);
-		// res.send(obj)
-		res.redirect(`/products/${obj.id}`);
+		// get errors from the form input
+		let errors = validationResult(req);
+
+		// res.send(JSON.stringify(errors.mapped(), null, 2));
+
+		if (errors.isEmpty()) {
+			let data = req.body;
+			data.image = ['img', ... data.name.toLowerCase().split(" ")].join('-') + '.jpg'
+			let obj = model.addEntry(data);
+			res.redirect(`/products/${obj.id}`);
+		} else {
+			res.render('product-create-form', { errors: errors.mapped() , old: req.body })
+		}
 	},
 
 	// Update - Form to edit
